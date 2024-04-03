@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".view.ui.RegistryActivity">
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/gdlRegistryLeft"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="36dp" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/gdlRegistryRight"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_end="36dp" />
+
+    <ImageView
+        android:id="@+id/mgvRegistry"
+        android:layout_width="149dp"
+        android:layout_height="149dp"
+        android:layout_marginTop="16dp"
+        android:tint="#E1BEE7"
+        app:layout_constraintEnd_toStartOf="@+id/gdlRegistryRight"
+        app:layout_constraintStart_toStartOf="@+id/gdlRegistryLeft"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/baseline_person_add_24" />
+
+    <TextView
+        android:id="@+id/txvRegistryTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/comfortaa_light"
+        android:text="@string/valRegister"
+        android:textColor="#E1BEE7 "
+        android:textSize="24sp"
+        app:layout_constraintEnd_toStartOf="@+id/gdlRegistryRight"
+        app:layout_constraintStart_toStartOf="@+id/gdlRegistryLeft"
+        app:layout_constraintTop_toBottomOf="@+id/mgvRegistry" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/tilRegistryDni"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        app:layout_constraintEnd_toStartOf="@+id/gdlRegistryRight"
+        app:layout_constraintStart_toStartOf="@+id/gdlRegistryLeft"
+        app:layout_constraintTop_toBottomOf="@+id/txvRegistryTitle"
+        app:startIconDrawable="@drawable/baseline_person_24">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/ietRegistryDni"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/valDni" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/tilRegistryPassword"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        app:layout_constraintEnd_toStartOf="@+id/gdlRegistryRight"
+        app:layout_constraintStart_toStartOf="@+id/gdlRegistryLeft"
+        app:layout_constraintTop_toBottomOf="@+id/tilRegistryDni"
+        app:passwordToggleEnabled="true"
+        app:startIconDrawable="@drawable/baseline_lock_24">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/ietRegistryPassword"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/valPassword"
+            android:password="true" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/tilRegistryPhone"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        app:layout_constraintEnd_toStartOf="@+id/gdlRegistryRight"
+        app:layout_constraintStart_toStartOf="@+id/gdlRegistryLeft"
+        app:layout_constraintTop_toBottomOf="@+id/tilRegistryPassword"
+        app:startIconDrawable="@drawable/baseline_local_phone_24">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/ietRegistryPhone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/valPhone" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/tilRegistryEmail"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        app:layout_constraintEnd_toStartOf="@+id/gdlRegistryRight"
+        app:layout_constraintStart_toStartOf="@+id/gdlRegistryLeft"
+        app:layout_constraintTop_toBottomOf="@+id/tilRegistryPhone"
+        app:startIconDrawable="@drawable/baseline_alternate_email_24">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/ietRegistryEmail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/valEmail" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
